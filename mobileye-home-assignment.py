@@ -122,6 +122,11 @@ def function_2(item_type: str, year: int)-> list:
                 print(f"\nLooking at issue {issue.id}")
                 print(f"\t{issue.created_at}")
                 results.append((project.name,issue))
+    
+    if not results:
+        print(f"No {item_type} found from the year {year}.")
+        
+    return results
 
 
     
